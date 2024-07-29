@@ -48,7 +48,7 @@
 
 
 
-![App Screenshot]()
+
 ![Status](image.png)
 ![notification](image-1.png)
 ![successfull](image-2.png)
