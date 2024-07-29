@@ -1,0 +1,8 @@
+.env
+__pycache__
+requirements.txt
+
+
+app.cpython-312.pyc
+db.cpython-312.pyc
+mobile.cpython-312.pyc
