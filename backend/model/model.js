@@ -1,8 +1,6 @@
 const { Sequelize, DataTypes } = require('sequelize');
-
-const sequelize = new Sequelize(
-  "postgresql://postgres.lubrypgqizxcfzhtopvr:44U5YIdTiHyOuy43@aws-0-us-east-1.pooler.supabase.com:6543/postgres"
-);
+require("dotenv").config(); 
+const sequelize = new Sequelize(process.env.DB_URL);
 
 const FlightNode = sequelize.define("Flight", {
   flight_id: { type: DataTypes.STRING, unique: true, allowNull: false },
