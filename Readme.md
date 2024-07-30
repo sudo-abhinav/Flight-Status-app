@@ -15,7 +15,8 @@
         - And Second Endpoint is we fetch all flight Number and tell user to select
          your flight number and enter Phone Number and Email to get Notification on 
          their both  then we send notification on mobile nuber using twillio 
-         and sending notification on mail using nodemailer
+         and sending notification on mail using nodemailer and we store user
+         mobile number and emailid along with Flight_Number for future reference.
 
 
 * #### Tech Stack
