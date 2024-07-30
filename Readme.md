@@ -8,15 +8,15 @@
 ### Problem Statement: Flight Status and Notifications
 
 ### Description: Develop a system to provide real-time flight status updates and notifications to passengers.
-    * what am trying todo 
-        * First am creating a Flight endPoint to get add all Flight data , if user 
+- ### what am trying todo 
+  - First am creating a Flight endPoint to get add all Flight data , if user 
         don't want to notification Justt check their flist status on all flight 
         Table   
-        * And Second Endpoint is we fetch all flight Number and tell user to select
+  - And Second Endpoint is we fetch all flight Number and tell user to select
          your flight number and enter Phone Number and Email to get Notification on 
          their both  then we send notification on mobile nuber using twillio 
          and sending notification on mail using nodemailer and we store user
-         mobile number and emailid along with Flight_Number for future reference.
+         mobile number and emailid along with Flight Number for future reference.
 
 
 * #### Tech Stack
@@ -53,7 +53,7 @@
 
     | Parameter | Type     | Description                |
     | :-------- | :------- | :------------------------- |
-    | `api_key` | `string` | it will gives you all filght update  |
+    | `api_key` | `string` | it will gives you all filght data  |
 
 - ## Post Route For Geeting Notification
 
