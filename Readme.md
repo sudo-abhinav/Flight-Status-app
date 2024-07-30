@@ -11,7 +11,16 @@
 
 #### Tech Stack
    - FrontEnd : *React* ,*axios* , *Tailwind Css*.
-   - Backend : *Flask* , *Twillio* , *SQLAlchemy* , *SMTP*,
+              - react : react use for frontend for easy UI.
+              - axios : am using axios for handling API.
+              - Tailwind CSS :- tailwind using for Good Design.
+   - Backend : *Express* , *nodemailer* , *dotenv*,*sequelize* , *twilio* , *SupabaseDB-postgre*,
+              - Express : am using express creating API.
+              - SupabaseDB-postgre: supabase is using for online postgreDB Database server  
+              - nodeMailer : nodemailer use for sending mail to user for Flight update.
+              - twillio : twillio using for sending Flight Update to user on Mobile phone,
+              - sequelize: sequelize is orm it am using for writing sql queries and creating schema.
+              - dotenv : using dotenv for dealing with secret key and password 
    
 ## API Reference
 
