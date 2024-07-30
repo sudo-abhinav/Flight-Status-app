@@ -12,7 +12,11 @@
         - First am creating a Flight endPoint to get add all Flight data , if user 
         don't want to notification Justt check their flist status on all flight 
         Table   
-        - And Second Endpoint is we fetch all flight Number and tell user to select your flight number and enter Phone Number and Email to get Notification on their both  then we send notification on mobile nuber using twillio and sending notification on mail using nodemailer
+        - And Second Endpoint is we fetch all flight Number and tell user to select
+         your flight number and enter Phone Number and Email to get Notification on 
+         their both  then we send notification on mobile nuber using twillio 
+         and sending notification on mail using nodemailer
+
 
 * #### Tech Stack
    - FrontEnd : *React* ,*axios* , *Tailwind Css*.
