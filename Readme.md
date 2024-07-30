@@ -9,51 +9,51 @@
 
 ### Description: Develop a system to provide real-time flight status updates and notifications to passengers.
 
-#### Tech Stack
+* #### Tech Stack
    - FrontEnd : *React* ,*axios* , *Tailwind Css*.
-              - react : react use for frontend for easy UI.
-              - axios : am using axios for handling API.
-              - Tailwind CSS :- tailwind using for Good Design.
-   - Backend : *Express* , *nodemailer* , *dotenv*,*sequelize* , *twilio* , *SupabaseDB-postgre*,
-              - Express : am using express creating API.
-              - SupabaseDB-postgre: supabase is using for online postgreDB Database server  
-              - nodeMailer : nodemailer use for sending mail to user for Flight update.
-              - twillio : twillio using for sending Flight Update to user on Mobile phone,
-              - sequelize: sequelize is orm it am using for writing sql queries and creating schema.
-              - dotenv : using dotenv for dealing with secret key and password 
+        - react : react use for frontend for easy UI.
+        - axios : am using axios for handling API.
+         - Tailwind CSS :- tailwind using for Good Design.
+   - Backend : *Express* , *nodemailer* , *dotenv*,*sequelize* , *twilio* , *SupabaseDB-postgre* 
+        - Express : am using express creating API.
+        - SupabaseDB-postgre: supabase is using for online postgreDB Database server  
+        - nodeMailer : nodemailer use for sending mail to user for Flight update.
+        - twillio : twillio using for sending Flight Update to user on Mobile phone,
+        - sequelize: sequelize is orm it am using for writing sql queries and creating schema.
+        - dotenv : using dotenv for dealing with secret key and password 
    
-## API Reference
+- ## API Reference
 
-#### Test Route
+    - #### Test Route
 
-```http
-  GET /api/test
-```
+        ```http
+          GET /api/test
+        ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` |  'Welcome User..'  |
+        | Parameter | Type     | Description                |
+        | :-------- | :------- | :------------------------- |
+        | `api_key` | `string` |  'Welcome User..'  |
 
 
-#### Get all Flight Status
+- ## Get all Flight Status
 
-```http
-  GET /api/flight
-```
+        ```http
+          GET /api/flight
+        ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | it will gives you all filght update  |
+    | Parameter | Type     | Description                |
+    | :-------- | :------- | :------------------------- |
+    | `api_key` | `string` | it will gives you all filght update  |
 
-#### Post Route For Geeting Notification
+- ## Post Route For Geeting Notification
 
-```http
-  POST /api/subscribe
-```
+    ```http
+      POST /api/subscribe
+    ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `flight_id , email ,phone`      | `string , num , string` | **Required**. all Field is required for Getting Notification on Mobile and Mail |
+    | Parameter | Type     | Description                       |
+    | :-------- | :------- | :-------------------------------- |
+    | `flight_id , email ,phone`      | `string , num , string` | **Required**. all Field is required for Getting Notification on Mobile and Mail |
 
 
 

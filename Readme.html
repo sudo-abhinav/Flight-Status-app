@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Case study for full stack developer</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="case-study-for-full-stack-developer">Case study for full stack developer</h1>
+<h3 id="linkdein"><a href="https://linkedin.com/in/sudo-abhinav/">Linkdein</a></h3>
+<h3 id="github"><a href="https://github.com/sudo-abhinav">Github</a></h3>
+<hr>
+<h3 id="problem-statement-flight-status-and-notifications">Problem Statement: Flight Status and Notifications</h3>
+<h3 id="description-develop-a-system-to-provide-real-time-flight-status-updates-and-notifications-to-passengers">Description: Develop a system to provide real-time flight status updates and notifications to passengers.</h3>
+<ul>
+<li>
+<h4 id="tech-stack">Tech Stack</h4>
+<ul>
+<li>FrontEnd : <em>React</em> ,<em>axios</em> , <em>Tailwind Css</em>.
+<ul>
+<li>react : react use for frontend for easy UI.</li>
+<li>axios : am using axios for handling API.
+- Tailwind CSS :- tailwind using for Good Design.</li>
+</ul>
+</li>
+<li>Backend : <em>Express</em> , <em>nodemailer</em> , <em>dotenv</em>,<em>sequelize</em> , <em>twilio</em> , <em>SupabaseDB-postgre</em>
+<ul>
+<li>Express : am using express creating API.</li>
+<li>SupabaseDB-postgre: supabase is using for online postgreDB Database server</li>
+<li>nodeMailer : nodemailer use for sending mail to user for Flight update.</li>
+<li>twillio : twillio using for sending Flight Update to user on Mobile phone,</li>
+<li>sequelize: sequelize is orm it am using for writing sql queries and creating schema.</li>
+<li>dotenv : using dotenv for dealing with secret key and password</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<h2 id="api-reference">API Reference</h2>
+<ul>
+<li>
+<h4 id="test-route">Test Route</h4>
+<pre><code class="language-http">  GET /api/test
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>api_key</code></td>
+<td style="text-align:left"><code>string</code></td>
+<td style="text-align:left">'Welcome User..'</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+<li>
+<h2 id="get-all-flight-status">Get all Flight Status</h2>
+<pre><code>  ```http
+    GET /api/flight
+  ```
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>api_key</code></td>
+<td style="text-align:left"><code>string</code></td>
+<td style="text-align:left">it will gives you all filght update</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<h2 id="post-route-for-geeting-notification">Post Route For Geeting Notification</h2>
+<pre><code class="language-http">  POST /api/subscribe
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>flight_id , email ,phone</code></td>
+<td style="text-align:left"><code>string , num , string</code></td>
+<td style="text-align:left"><strong>Required</strong>. all Field is required for Getting Notification on Mobile and Mail</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p><img src="file:///c:\Users\abhinav\Desktop\HTH\image.png" alt="Status">
+<img src="file:///c:\Users\abhinav\Desktop\HTH\image-1.png" alt="notification">
+<img src="file:///c:\Users\abhinav\Desktop\HTH\image-2.png" alt="successfull">
+<img src="file:///c:\Users\abhinav\Desktop\HTH\image-3.png" alt="backButton"></p>
+
+            
+            
+        </body>
+        </html>
