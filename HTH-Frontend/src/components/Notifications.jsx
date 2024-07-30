@@ -10,14 +10,14 @@ const Notifications = ({ flights }) => {
   const [dropdownData, setDropdownData] = useState("");
   const [message, setMessage] = useState("");
   const [notification, setNotification] = useState(""); // New state for notification message
-
-  const handleSubscribe = (e) => {
+// http://localhost:3000/subscribe
+  const handleSubscribe = async (e) => {
     e.preventDefault();
-    axios
-      .post("http://127.0.0.1:5000/api/subscribe", {
-        dropdownData,
-        email,
-        phone,
+   await axios
+      .post("http://localhost:3000/subscribe", {
+        flight_id:dropdownData,
+        email:email,
+        phone:phone,
       })
       .then((response) => {
         console.log("Subscribed:", response.data);
@@ -34,11 +34,12 @@ const Notifications = ({ flights }) => {
   };
 
   const handleNumberValidation = (e) => {
-    const phoneNumber = e.target.value;
-    const isNumeric = /^\d{10}$/.test(phoneNumber);
+    setPhone(e.target.value)
+    const phone = e.target.value;
+    const isNumeric = /^\d{10}$/.test(phone);
 
     if (isNumeric) {
-      setPhone(phoneNumber);
+      setPhone(phone);
       setMessage('');
     } else {
       setMessage('Mobile number must be exactly 10 digits.');

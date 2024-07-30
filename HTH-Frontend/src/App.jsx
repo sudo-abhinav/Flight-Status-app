@@ -10,7 +10,8 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:5000/api/flights")
+      .get("http://127.0.0.1:3000/flight")
+      // http://localhost:3000/flight
       .then((response) => {
         console.log("Fetched flights data:", response.data); // Debugging line
         setFlights(response.data);

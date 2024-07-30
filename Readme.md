@@ -29,7 +29,7 @@
 #### Get all Flight Status
 
 ```http
-  GET /api/flights
+  GET /api/flight
 ```
 
 | Parameter | Type     | Description                |

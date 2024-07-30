@@ -4,31 +4,16 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const FlightStatus = ({ flights = [] }) => {
-  // const [flights, setFlights] = useState([]);
-
-  // useEffect(() => {
-  //   axios
-  //     .get("http://127.0.0.1:5000/api/flights")
-  //     .then((response) => setFlights(response.data))
-  //     .catch((error) => console.error("Error fetching flight data:", error));
-  // }, []);
-
+  
   return (
     <>
       <div className="bg-blue-900  min-h-screen py-8">
-        <div className="bg-blue-400 vw-full max-w-2xl mx-auto shadow-xl rounded-lg px-4 py-3 text-white">
+        <div className="bg-blue-400 vw-full max-w-4xl mx-auto shadow-xl rounded-lg px-4 py-3 text-white">
           <h1 className=" text-center text-3xl font-bold mb-3">
             Flight Status
           </h1>
           <hr></hr>
           <div className="mt-3">
-            {/* <ul>
-            {flights.map((flight) => (
-              <li key={flight.id}>
-                {flight.number} - {flight.status}
-              </li>
-            ))}
-          </ul> */}
             <div className="mt-6 flex flex-col ">
               <div className="-mx-4 -my-2 overflow-y-auto  sm:-mx-6 lg:-mx-8">
                 <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
@@ -46,7 +31,7 @@ const FlightStatus = ({ flights = [] }) => {
                             scope="col"
                             className="px-4 text-center py-3.5  text-md font-normal  text-gray-500"
                           >
-                            airline
+                            Airline
                           </th>
                           <th
                             scope="col"
@@ -64,13 +49,25 @@ const FlightStatus = ({ flights = [] }) => {
                             scope="col"
                             className="px-4 text-center py-3.5  text-md font-normal  text-gray-500"
                           >
-                            arrival_gate
+                           From
                           </th>
                           <th
                             scope="col"
                             className="px-4 text-center py-3.5  text-md font-normal  text-gray-500"
                           >
-                            departure_gate
+                            TO
+                          </th>
+                          <th
+                            scope="col"
+                            className="px-4 text-center py-3.5  text-md font-normal  text-gray-500"
+                          >
+                            Arrival_Gate
+                          </th>
+                          <th
+                            scope="col"
+                            className="px-4 text-center py-3.5  text-md font-normal  text-gray-500"
+                          >
+                            Departure_Gate
                           </th>
                         </tr>
                       </thead>
@@ -99,6 +96,12 @@ const FlightStatus = ({ flights = [] }) => {
                                     {flight.status}
                                   </td>
                                   <td className="whitespace-nowrap px-4 py-4 text-center">
+                                    {flight.from}
+                                  </td>
+                                  <td className="whitespace-nowrap px-4 py-4 text-center">
+                                    {flight.to}
+                                  </td>
+                                  <td className="whitespace-nowrap px-4 py-4 text-center">
                                     {flight.arrival_gate}
                                   </td>
                                   <td className="whitespace-nowrap px-4 py-4 text-center">
@@ -110,7 +113,7 @@ const FlightStatus = ({ flights = [] }) => {
                         ) : (
                           <tr>
                             <td
-                              colSpan="2"
+                              colSpan="8"
                               className="whitespace-nowrap px-4 py-4 text-center text-gray-500"
                             >
                               No flight data available
