@@ -4,13 +4,14 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Notifications from "./components/Notifications";
+// require("dotenv").config();
 
 function App() {
   const [flights, setFlights] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:3000/flight")
+      .get("process.env.FLightAPI")
       // http://localhost:3000/flight
       .then((response) => {
         console.log("Fetched flights data:", response.data); // Debugging line
