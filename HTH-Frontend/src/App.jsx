@@ -21,11 +21,11 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/status" element={<FlightStatus flights={flights} />} />
         <Route
           path="/"
           element={<Notifications flights={flights} />}
         />
+        <Route path="/status" element={<FlightStatus flights={flights} />} />
       </Routes>
     </Router>
   );
