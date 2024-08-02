@@ -48,8 +48,8 @@ app.post("/api/subscribe", async (req, res) => {
     }
 
     console.log(body);
-    smsServices(body, phone);
-    // emailService(email, body);
+    // smsServices(body, phone);
+    emailService(email, body);
     res.status(201).json({ message: "Subscribed successfully!", subscriber });
   } catch (error) {
     res.status(500).json({ message: "Error subscribing user.", error });
