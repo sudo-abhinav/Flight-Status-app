@@ -23,7 +23,7 @@ function App() {
       <Routes>
         <Route path="/status" element={<FlightStatus flights={flights} />} />
         <Route
-          path="/notification"
+          path="/"
           element={<Notifications flights={flights} />}
         />
       </Routes>
