@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("process.env.FLightAPI")
+      .get("https://flight-status-app.onrender.com/api/flight")
       // http://localhost:3000/flight
       .then((response) => {
         console.log("Fetched flights data:", response.data); // Debugging line
