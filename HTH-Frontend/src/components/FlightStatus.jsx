@@ -125,7 +125,7 @@ const FlightStatus = ({ flights = [] }) => {
                   </div>
                   {/* notification button */}
                   <div className="flex flex-col items-center">
-                    <Link to="/Notifications">
+                    <Link to="/">
                       <button className="mt-3 rounded-sm p-1 text-xl border border-black/10 bg-red-400 hover:bg-red-900">
                         Get Flight Status Notification
                       </button>
